@@ -769,7 +769,7 @@ function init(staticryptConfig, templateConfig) {
         }
 
         // if there is expiration configured, check if we're not beyond the expiration
-        if (rememberDurationInDays && rememberDurationInDays > 0) {
+        if (rememberDurationInDays && rememberDurationInDays > 0.0416666667) {
             const expiration = localStorage.getItem(rememberExpirationKey),
                 isExpired = expiration && new Date().getTime() > parseInt(expiration);
 
